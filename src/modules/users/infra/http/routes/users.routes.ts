@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import multer from 'multer';
+import * as multer from 'multer';
 import uploadConfig from '@config/upload';
 
 import UsersController from '../controllers/UsersCrontroller';
