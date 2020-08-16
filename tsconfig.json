@@ -18,6 +18,7 @@
         "shared/*"
       ]
     },
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
