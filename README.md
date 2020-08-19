@@ -17,9 +17,8 @@
 </h4>
 
 <p align="center">
- <a href="#objetivo">Sobre</a> •
+ <a href="#sobre">Sobre</a> •
  <a href="#tecnologias">Tecnologias</a> •
- <a href="#contribuicao">Contribuição</a> •
  <a href="#licenc-a">Licença</a> •
 </p>
 
@@ -31,9 +30,6 @@ Os clientes podem escolher o melhor horário disponível com o barbeiro para age
 Os provedores de serviços podem ver todos os seus compromissos, gerenciar horários e também pode ver se um cliente cancelou um agendamento.
 </p>
 
-
-</br>
-</br>
 </br>
 
 # Pré-requisitos
