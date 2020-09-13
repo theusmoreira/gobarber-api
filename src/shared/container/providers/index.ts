@@ -6,7 +6,7 @@ import DiskStorageProvider from './StorageProvider/implementations/DiskStoragePr
 
 import IMailProvider from './MailProvider/models/IMailProvider';
 import EtherealMailProvider from './MailProvider/implementations/EtherealMailProvider';
-import SMTPMailProvider from './MailProvider/implementations/SMTPMailProvider';
+import SesMailProvider from './MailProvider/implementations/SesMailProvider';
 
 import IMailTemplateProvider from './MailTemplateProvider/models/IMailTemplateProvider';
 import HandlebarsMailTemplateProvider from './MailTemplateProvider/implementations/HandlebarsMailTemplateProvider';
@@ -25,5 +25,5 @@ container.registerInstance<IMailProvider>(
   'MailProvider',
   mailConfig.driver === 'ethereal'
     ? container.resolve(EtherealMailProvider)
-    : container.resolve(SMTPMailProvider),
+    : container.resolve(SesMailProvider),
 );
