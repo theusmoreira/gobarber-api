@@ -8,8 +8,8 @@ import IMailProvider from './models/IMailProvider';
 
 const providers = {
   ethereal: container.resolve(EtherealMailProvider),
-  ses: container.resolve(SesMailProvider),
   smtp: container.resolve(SMTPMailProvider),
+  ses: container.resolve(SesMailProvider),
 };
 
 container.registerInstance<IMailProvider>(
