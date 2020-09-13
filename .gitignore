@@ -1,7 +1,7 @@
 node_modules/
 coverage/
 .vscode/
-.env
+teste
 build/
 
 ormconfig.json
