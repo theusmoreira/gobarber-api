@@ -3,8 +3,9 @@ coverage/
 .vscode/
 .env
 build/
+dist/
 
-ormconfig.json
+ormconfig.js
 
 tmp/*
 !tmp/.gitkeep
