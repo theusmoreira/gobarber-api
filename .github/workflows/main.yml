@@ -27,6 +27,7 @@ jobs:
       - name: Copy dist to AWS EC2
         uses: appleboy/scp-action@master
         with:
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
