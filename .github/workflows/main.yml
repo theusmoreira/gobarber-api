@@ -1,0 +1,35 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+        with: 
+          node-version: 12.x
+          
+      - name: Install Dependecies
+        run: yarn
+      
+      - name: Run Build
+        run: yarn build
+      
+      
+      - name: Copy dist to AWS EC2
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist"
+          target: "test"
