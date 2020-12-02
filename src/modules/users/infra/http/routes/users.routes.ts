@@ -4,7 +4,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 
 import uploadConfig from '@config/upload';
 
-import UsersController from '../controllers/UsersCrontroller';
+import UsersController from '../controllers/UsersController';
 import UserAvatarController from '../controllers/UserAvatarController';
 
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
@@ -21,6 +21,7 @@ usersRouter.post(
       name: Joi.string().required(),
       email: Joi.string().email().required(),
       password: Joi.string().required(),
+      type: Joi.string().valid('provider', 'user').required(),
     },
   }),
   usersController.create,

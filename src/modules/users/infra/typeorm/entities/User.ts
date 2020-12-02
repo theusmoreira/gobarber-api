@@ -25,6 +25,9 @@ class User {
   password: string;
 
   @Column()
+  type: string;
+
+  @Column()
   avatar: string;
 
   @CreateDateColumn()
