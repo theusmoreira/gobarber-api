@@ -22,6 +22,11 @@ usersRouter.post(
       email: Joi.string().email().required(),
       password: Joi.string().required(),
       type: Joi.string().valid('provider', 'user').required(),
+      address: Joi.string().required(),
+      whatsapp: Joi.string()
+        .length(11)
+        .pattern(/^[0-9]+$/)
+        .required(),
     },
   }),
   usersController.create,

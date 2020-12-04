@@ -12,6 +12,8 @@ interface IRequest {
   email: string;
   password: string;
   type: 'provider' | 'user';
+  address: string;
+  whatsapp: string;
 }
 
 @injectable()
@@ -32,6 +34,8 @@ class CreateUserService {
     email,
     password,
     type,
+    address,
+    whatsapp,
   }: IRequest): Promise<User> {
     const checkUserExits = await this.usersRepository.findByEmail(email);
 
@@ -46,6 +50,8 @@ class CreateUserService {
       email,
       password: hashedPassword,
       type,
+      address,
+      whatsapp,
     });
 
     await this.cacheProvider.invalidatePrefix('provider-list');

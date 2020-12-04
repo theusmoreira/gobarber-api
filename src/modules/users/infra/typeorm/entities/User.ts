@@ -28,6 +28,12 @@ class User {
   type: string;
 
   @Column()
+  address: string;
+
+  @Column()
+  whatsapp: string;
+
+  @Column()
   avatar: string;
 
   @CreateDateColumn()
