@@ -14,6 +14,9 @@ const usersController = new UsersController();
 const userAvatarController = new UserAvatarController();
 const upload = multer(uploadConfig.multer);
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const myCustomJoi = Joi.extend(require('joi-phone-number'));
+
 usersRouter.post(
   '/',
   celebrate({
@@ -23,9 +26,9 @@ usersRouter.post(
       password: Joi.string().required(),
       type: Joi.string().valid('provider', 'user').required(),
       address: Joi.string().required(),
-      whatsapp: Joi.string()
-        .length(11)
-        .pattern(/^[0-9]+$/)
+      whatsapp: myCustomJoi
+        .string()
+        .phoneNumber({ defaultCountry: 'BR', format: 'e164' })
         .required(),
     },
   }),

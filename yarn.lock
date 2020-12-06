@@ -3446,6 +3446,11 @@ globrex@^0.1.1:
   resolved "https://registry.yarnpkg.com/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
   integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
 
+google-libphonenumber@3.2.13:
+  version "3.2.13"
+  resolved "https://registry.yarnpkg.com/google-libphonenumber/-/google-libphonenumber-3.2.13.tgz#8f41f2ce1739d40e2b9ebccc75dca95474cdf0b5"
+  integrity sha512-USnpjJkD8St+wyshy154lF74JeauNCd8vrcusSlWjSFWitXzl7ZSuCunA/XxeVLqBv6DShrSfFMYdwGZ7x4hOw==
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
@@ -4405,6 +4410,13 @@ jmespath@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
+
+joi-phone-number@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/joi-phone-number/-/joi-phone-number-5.0.0.tgz#4edb570cc12e4b49ec1671fc7b37119d7c9472bb"
+  integrity sha512-TTo7JtVAe/OHxuKHnmO+/jR6aKVUxHU2PgRotryc2tS1YN95/OgSn3tT3Ipzw5mjyzeyjb/V0Sk6L8gUq2U/9w==
+  dependencies:
+    google-libphonenumber "3.2.13"
 
 joi@17.x.x:
   version "17.2.1"
