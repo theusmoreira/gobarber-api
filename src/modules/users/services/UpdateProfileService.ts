@@ -11,6 +11,8 @@ interface IRequest {
   user_id: string;
   name: string;
   email: string;
+  address: string;
+  whatsapp: string;
   old_password?: string;
   password?: string;
 }
@@ -29,6 +31,8 @@ class UpdateProfileService {
     user_id,
     name,
     email,
+    address,
+    whatsapp,
     password,
     old_password,
   }: IRequest): Promise<User> {
@@ -46,6 +50,8 @@ class UpdateProfileService {
 
     user.name = name;
     user.email = email;
+    user.address = address;
+    user.whatsapp = whatsapp;
 
     if (password && !old_password) {
       throw new AppError('You need inform the old password');
