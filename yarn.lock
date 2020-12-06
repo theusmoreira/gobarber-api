@@ -1395,6 +1395,18 @@
     jest-diff "^25.2.1"
     pretty-format "^25.2.1"
 
+"@types/joi-phone-number@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/joi-phone-number/-/joi-phone-number-5.0.0.tgz#97bd284e295d3fe36c4043c83df98666f41afb3b"
+  integrity sha512-flS3wBt3lNcNa8MqbfB36WTWhBiELMfm4JJOq2D120zRRpRnTkrlK27/JTu0lnREr+o2XWO+68AIfXuDe1qjZQ==
+  dependencies:
+    "@types/joi" "*"
+
+"@types/joi@*":
+  version "14.3.4"
+  resolved "https://registry.yarnpkg.com/@types/joi/-/joi-14.3.4.tgz#eed1e14cbb07716079c814138831a520a725a1e0"
+  integrity sha512-1TQNDJvIKlgYXGNIABfgFp9y0FziDpuGrd799Q5RcnsDu+krD+eeW/0Fs5PHARvWWFelOhIG2OPCo6KbadBM4A==
+
 "@types/json-schema@^7.0.3":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.5.tgz#dcce4430e64b443ba8945f0290fb564ad5bac6dd"

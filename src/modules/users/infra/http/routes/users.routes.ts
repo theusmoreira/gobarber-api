@@ -3,7 +3,6 @@ import multer from 'multer';
 import { celebrate, Segments, Joi } from 'celebrate';
 
 import uploadConfig from '@config/upload';
-
 import UsersController from '../controllers/UsersController';
 import UserAvatarController from '../controllers/UserAvatarController';
 
@@ -28,7 +27,7 @@ usersRouter.post(
       address: Joi.string().required(),
       whatsapp: myCustomJoi
         .string()
-        .phoneNumber({ defaultCountry: 'BR', format: 'e164' })
+        .phoneNumber({ defaultCountry: 'BR', format: 'national', strict: true })
         .required(),
     },
   }),
