@@ -27,7 +27,7 @@ usersRouter.post(
       address: Joi.string().required(),
       whatsapp: myCustomJoi
         .string()
-        .phoneNumber({ defaultCountry: 'BR', format: 'national', strict: true })
+        .phoneNumber({ defaultCountry: 'BR', format: 'e164', strict: true })
         .required(),
     },
   }),
