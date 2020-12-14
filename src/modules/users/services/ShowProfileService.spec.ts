@@ -17,7 +17,10 @@ describe('UpdateProfile', () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'jhondoe@example.com',
-      password: '1234546',
+      address: 'Teste',
+      whatsapp: '5511999999999',
+      type: 'user',
+      password: '123456',
     });
 
     const profile = await showProfile.execute({
