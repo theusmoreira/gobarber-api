@@ -23,7 +23,7 @@ describe('ListProviders', () => {
       email: 'johndoe@example.com',
       address: 'Teste',
       whatsapp: '5511999999999',
-      type: 'user',
+      type: 'provider',
       password: '123456',
     });
 
@@ -32,7 +32,7 @@ describe('ListProviders', () => {
       email: 'johntre@example.com',
       address: 'Teste',
       whatsapp: '5511999999999',
-      type: 'user',
+      type: 'provider',
       password: '123456',
     });
 
